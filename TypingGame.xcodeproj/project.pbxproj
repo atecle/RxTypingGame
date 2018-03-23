@@ -13,6 +13,7 @@
 		66480BDD2065379E0027ED11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDC2065379E0027ED11 /* Assets.xcassets */; };
 		66480BE02065379E0027ED11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */; };
 		66480BEB2065379E0027ED11 /* TypingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BEA2065379E0027ED11 /* TypingGameTests.swift */; };
+		9E3A5BF9CAAC9B93E0D2808D /* Pods_TypingGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E70946E495BA08123999BC /* Pods_TypingGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		66480BE62065379E0027ED11 /* TypingGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypingGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66480BEA2065379E0027ED11 /* TypingGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingGameTests.swift; sourceTree = "<group>"; };
 		66480BEC2065379E0027ED11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745DA4F05232C3BEA9D64156 /* Pods-TypingGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypingGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame.debug.xcconfig"; sourceTree = "<group>"; };
+		A3E70946E495BA08123999BC /* Pods_TypingGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TypingGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C927BCCBF940E51EAB36F3C0 /* Pods-TypingGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypingGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3A5BF9CAAC9B93E0D2808D /* Pods_TypingGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14F8C9050AF35C7893B266D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E70946E495BA08123999BC /* Pods_TypingGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66480BC92065379E0027ED11 = {
 			isa = PBXGroup;
 			children = (
 				66480BD42065379E0027ED11 /* TypingGame */,
 				66480BE92065379E0027ED11 /* TypingGameTests */,
 				66480BD32065379E0027ED11 /* Products */,
+				6DDAC6EBC92496377F085473 /* Pods */,
+				14F8C9050AF35C7893B266D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +111,15 @@
 			path = TypingGameTests;
 			sourceTree = "<group>";
 		};
+		6DDAC6EBC92496377F085473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				745DA4F05232C3BEA9D64156 /* Pods-TypingGame.debug.xcconfig */,
+				C927BCCBF940E51EAB36F3C0 /* Pods-TypingGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66480BEF2065379E0027ED11 /* Build configuration list for PBXNativeTarget "TypingGame" */;
 			buildPhases = (
+				DCC8E1C08DB30731CE5B08F1 /* [CP] Check Pods Manifest.lock */,
 				66480BCE2065379E0027ED11 /* Sources */,
 				66480BCF2065379E0027ED11 /* Frameworks */,
 				66480BD02065379E0027ED11 /* Resources */,
+				0DBA9626615076541B661D55 /* [CP] Embed Pods Frameworks */,
+				B4DCB8CD036F7527814A74AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +220,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DBA9626615076541B661D55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4DCB8CD036F7527814A74AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCC8E1C08DB30731CE5B08F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TypingGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66480BCE2065379E0027ED11 /* Sources */ = {
@@ -351,6 +434,7 @@
 		};
 		66480BF02065379E0027ED11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745DA4F05232C3BEA9D64156 /* Pods-TypingGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +450,7 @@
 		};
 		66480BF12065379E0027ED11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C927BCCBF940E51EAB36F3C0 /* Pods-TypingGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
