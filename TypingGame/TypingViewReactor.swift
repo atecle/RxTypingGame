@@ -9,25 +9,28 @@
 import UIKit
 
 import RxSwift
-import ReactorKit
 
 final class TypingViewReactor: Reactor {
     
     let initialState: State
-    
-    struct State {
-    }
-    
+    var currentState: State
+
     enum Action {
-        
+        case updateText(String)
     }
     
     enum Mutation {
         case test
     }
 
+    /// State must emit values to assign to attributed string.
+    struct State {
+        
+    }
+    
     init() {
         self.initialState = State()
+        self.currentState = initialState
     }
     
     // Action -> Mutation

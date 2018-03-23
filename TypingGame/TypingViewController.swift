@@ -8,30 +8,52 @@
 
 import UIKit
 
-import ReactorKit
 import RxSwift
 import RxCocoa
 
-final class TypingViewController: UIViewController, View {
+/// first problem i want to solve is to have text color change as you type
+final class TypingViewController: UIViewController {
     
     // MARK: - View
     
     var disposeBag = DisposeBag()
+    typealias Action = TypingViewReactor.Action
+
+    private var reactor: TypingViewReactor?
 
     // MARK: - IBOutlets
     
-    @IBOutlet weak var textField: UITextView!
+    @IBOutlet private weak var textField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setup()
     }
     
+    enum Color {
+        static let defaultTextColor: UIColor = .darkGray
+        static let correctTextColor: UIColor = .green
+        static let incorrectTextColor: UIColor = .red
+    }
+
     // MARK: - Binding
     
     func bind(reactor: TypingViewReactor) {
-        
+        textField.rx.text
+            .asObservable()
+            .map { Action.updateText($0 ?? "" ) }
+            .bind(to: reactor.react)
+            .subscribe { state in
+                print(state)
+            }.disposed(by: disposeBag)
     }
-
+    
+    // MARK: - Set up
+    
+    private func setup() {
+        reactor = TypingViewReactor()
+        bind(reactor: reactor!)
+    }
+    
 }
 
