@@ -24,6 +24,12 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-jS-HLx">
                                         <rect key="frame" x="14" y="30" width="347" height="617"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1js-1W-9fc">
+                                        <rect key="frame" x="14" y="30" width="347" height="617"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -31,7 +37,11 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gXk-jS-HLx" firstAttribute="height" secondItem="vJh-fl-RHr" secondAttribute="height" constant="-30" id="2vc-Gv-2oH"/>
+                                    <constraint firstItem="1js-1W-9fc" firstAttribute="bottom" secondItem="gXk-jS-HLx" secondAttribute="bottom" id="6Bj-13-xRi"/>
+                                    <constraint firstItem="1js-1W-9fc" firstAttribute="leading" secondItem="gXk-jS-HLx" secondAttribute="leading" id="Hft-Tr-Pbu"/>
                                     <constraint firstItem="gXk-jS-HLx" firstAttribute="leading" secondItem="vJh-fl-RHr" secondAttribute="leading" constant="14" id="LO3-lV-N97"/>
+                                    <constraint firstItem="1js-1W-9fc" firstAttribute="top" secondItem="gXk-jS-HLx" secondAttribute="top" id="N9m-wt-ByY"/>
+                                    <constraint firstItem="1js-1W-9fc" firstAttribute="trailing" secondItem="gXk-jS-HLx" secondAttribute="trailing" id="Uem-JK-vi1"/>
                                     <constraint firstItem="gXk-jS-HLx" firstAttribute="top" secondItem="vJh-fl-RHr" secondAttribute="top" constant="30" id="a3s-t4-PmP"/>
                                     <constraint firstAttribute="bottom" secondItem="gXk-jS-HLx" secondAttribute="bottom" id="fRY-0d-5Gd"/>
                                     <constraint firstAttribute="trailing" secondItem="gXk-jS-HLx" secondAttribute="trailing" constant="-14" id="hnE-Lk-vit"/>
@@ -49,7 +59,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="gXk-jS-HLx" id="aJD-JD-8ZA"/>
+                        <outlet property="hiddenTextView" destination="gXk-jS-HLx" id="eDa-ER-lKk"/>
+                        <outlet property="promptTextView" destination="1js-1W-9fc" id="r6R-cI-ym0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -17,13 +17,15 @@ final class TypingViewController: UIViewController {
     // MARK: - View
     
     var disposeBag = DisposeBag()
+    
     typealias Action = TypingViewReactor.Action
 
     private var reactor: TypingViewReactor?
 
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var textField: UITextView!
+    @IBOutlet private weak var hiddenTextView: UITextView!
+    @IBOutlet weak var promptTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +41,15 @@ final class TypingViewController: UIViewController {
     // MARK: - Binding
     
     func bind(reactor: TypingViewReactor) {
-        textField.rx.text
+        hiddenTextView.rx.text
             .asObservable()
             .map { Action.updateText($0 ?? "" ) }
+            .startWith(Action.load)
             .bind(to: reactor.react)
-            .subscribe { state in
-                print(state)
+            .subscribe { [weak promptTextView] state in
+                /// probably bad
+                guard let element = state.element else { return }
+                promptTextView?.attributedText = element.attributedText
             }.disposed(by: disposeBag)
     }
     
@@ -52,6 +57,7 @@ final class TypingViewController: UIViewController {
     
     private func setup() {
         reactor = TypingViewReactor()
+        promptTextView.isUserInteractionEnabled = false
         bind(reactor: reactor!)
     }
     
