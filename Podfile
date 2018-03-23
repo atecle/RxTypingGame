@@ -6,6 +6,7 @@ source 'https://github.com/atecle/atkit.git'
 def reactive_pods
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'ReactorKit'
 end 
 
 target 'TypingGame' do
