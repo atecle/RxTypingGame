@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD52065379E0027ED11 /* AppDelegate.swift */; };
+		66480BD82065379E0027ED11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD72065379E0027ED11 /* ViewController.swift */; };
+		66480BDB2065379E0027ED11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66480BD92065379E0027ED11 /* Main.storyboard */; };
+		66480BDD2065379E0027ED11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDC2065379E0027ED11 /* Assets.xcassets */; };
+		66480BE02065379E0027ED11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */; };
+		66480BEB2065379E0027ED11 /* TypingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BEA2065379E0027ED11 /* TypingGameTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66480BE72065379E0027ED11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66480BCA2065379E0027ED11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66480BD12065379E0027ED11;
+			remoteInfo = TypingGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66480BD22065379E0027ED11 /* TypingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66480BD52065379E0027ED11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66480BD72065379E0027ED11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66480BDA2065379E0027ED11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66480BDC2065379E0027ED11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66480BDF2065379E0027ED11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66480BE12065379E0027ED11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66480BE62065379E0027ED11 /* TypingGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypingGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66480BEA2065379E0027ED11 /* TypingGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingGameTests.swift; sourceTree = "<group>"; };
+		66480BEC2065379E0027ED11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66480BCF2065379E0027ED11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66480BE32065379E0027ED11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66480BC92065379E0027ED11 = {
+			isa = PBXGroup;
+			children = (
+				66480BD42065379E0027ED11 /* TypingGame */,
+				66480BE92065379E0027ED11 /* TypingGameTests */,
+				66480BD32065379E0027ED11 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66480BD32065379E0027ED11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66480BD22065379E0027ED11 /* TypingGame.app */,
+				66480BE62065379E0027ED11 /* TypingGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66480BD42065379E0027ED11 /* TypingGame */ = {
+			isa = PBXGroup;
+			children = (
+				66480BD52065379E0027ED11 /* AppDelegate.swift */,
+				66480BD72065379E0027ED11 /* ViewController.swift */,
+				66480BD92065379E0027ED11 /* Main.storyboard */,
+				66480BDC2065379E0027ED11 /* Assets.xcassets */,
+				66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */,
+				66480BE12065379E0027ED11 /* Info.plist */,
+			);
+			path = TypingGame;
+			sourceTree = "<group>";
+		};
+		66480BE92065379E0027ED11 /* TypingGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				66480BEA2065379E0027ED11 /* TypingGameTests.swift */,
+				66480BEC2065379E0027ED11 /* Info.plist */,
+			);
+			path = TypingGameTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66480BD12065379E0027ED11 /* TypingGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66480BEF2065379E0027ED11 /* Build configuration list for PBXNativeTarget "TypingGame" */;
+			buildPhases = (
+				66480BCE2065379E0027ED11 /* Sources */,
+				66480BCF2065379E0027ED11 /* Frameworks */,
+				66480BD02065379E0027ED11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TypingGame;
+			productName = TypingGame;
+			productReference = 66480BD22065379E0027ED11 /* TypingGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66480BE52065379E0027ED11 /* TypingGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66480BF22065379E0027ED11 /* Build configuration list for PBXNativeTarget "TypingGameTests" */;
+			buildPhases = (
+				66480BE22065379E0027ED11 /* Sources */,
+				66480BE32065379E0027ED11 /* Frameworks */,
+				66480BE42065379E0027ED11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66480BE82065379E0027ED11 /* PBXTargetDependency */,
+			);
+			name = TypingGameTests;
+			productName = TypingGameTests;
+			productReference = 66480BE62065379E0027ED11 /* TypingGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66480BCA2065379E0027ED11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "adam tecle";
+				TargetAttributes = {
+					66480BD12065379E0027ED11 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					66480BE52065379E0027ED11 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 66480BD12065379E0027ED11;
+					};
+				};
+			};
+			buildConfigurationList = 66480BCD2065379E0027ED11 /* Build configuration list for PBXProject "TypingGame" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66480BC92065379E0027ED11;
+			productRefGroup = 66480BD32065379E0027ED11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66480BD12065379E0027ED11 /* TypingGame */,
+				66480BE52065379E0027ED11 /* TypingGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66480BD02065379E0027ED11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66480BE02065379E0027ED11 /* LaunchScreen.storyboard in Resources */,
+				66480BDD2065379E0027ED11 /* Assets.xcassets in Resources */,
+				66480BDB2065379E0027ED11 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66480BE42065379E0027ED11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66480BCE2065379E0027ED11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66480BD82065379E0027ED11 /* ViewController.swift in Sources */,
+				66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66480BE22065379E0027ED11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66480BEB2065379E0027ED11 /* TypingGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66480BE82065379E0027ED11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66480BD12065379E0027ED11 /* TypingGame */;
+			targetProxy = 66480BE72065379E0027ED11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66480BD92065379E0027ED11 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66480BDA2065379E0027ED11 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66480BDF2065379E0027ED11 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66480BED2065379E0027ED11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66480BEE2065379E0027ED11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66480BF02065379E0027ED11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D9A7SWMXDW;
+				INFOPLIST_FILE = TypingGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gc.TypingGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66480BF12065379E0027ED11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D9A7SWMXDW;
+				INFOPLIST_FILE = TypingGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gc.TypingGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66480BF32065379E0027ED11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D9A7SWMXDW;
+				INFOPLIST_FILE = TypingGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gc.TypingGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TypingGame.app/TypingGame";
+			};
+			name = Debug;
+		};
+		66480BF42065379E0027ED11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D9A7SWMXDW;
+				INFOPLIST_FILE = TypingGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gc.TypingGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TypingGame.app/TypingGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66480BCD2065379E0027ED11 /* Build configuration list for PBXProject "TypingGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66480BED2065379E0027ED11 /* Debug */,
+				66480BEE2065379E0027ED11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66480BEF2065379E0027ED11 /* Build configuration list for PBXNativeTarget "TypingGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66480BF02065379E0027ED11 /* Debug */,
+				66480BF12065379E0027ED11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66480BF22065379E0027ED11 /* Build configuration list for PBXNativeTarget "TypingGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66480BF32065379E0027ED11 /* Debug */,
+				66480BF42065379E0027ED11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66480BCA2065379E0027ED11 /* Project object */;
+}
