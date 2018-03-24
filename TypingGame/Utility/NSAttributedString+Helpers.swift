@@ -8,16 +8,7 @@
 
 import UIKit
 
-extension NSAttributedString {
-
-//    static func promptText(input: String, prompt: String) -> NSAttributedString {
-//
-//
-//        return NSAttributedString(string: "")
-//    }
-}
-
-final class PromptInputStylingService {
+final class InputDisplayStylingService {
     
     private static let promptText = """
     This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works.

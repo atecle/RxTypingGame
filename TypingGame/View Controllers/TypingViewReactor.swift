@@ -8,6 +8,7 @@
 
 import UIKit
 
+import ReactorKit
 import RxSwift
 
 final class TypingViewReactor: Reactor {
@@ -44,12 +45,11 @@ final class TypingViewReactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .load:
-            print("Should print first")
-            let attributedText = PromptInputStylingService.defaultPrompt
+            let attributedText = InputDisplayStylingService.defaultPrompt
             return Observable.just(Mutation.updateAttributedText(attributedText))
         case .updateText(let text):
             print("Should print second")
-            let attributedText = PromptInputStylingService.promptText(input: text, prompt: promptText)
+            let attributedText = InputDisplayStylingService.promptText(input: text, prompt: promptText)
             return Observable.just(Mutation.updateAttributedText(attributedText))
         }
     }

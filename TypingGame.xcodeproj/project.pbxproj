@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6602C5B3206540DB00758337 /* TypingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602C5B2206540DB00758337 /* TypingViewReactor.swift */; };
-		6602C5B7206558C100758337 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602C5B6206558C100758337 /* Reactor.swift */; };
+		661714462066B98200EF65FC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661714452066B98200EF65FC /* BaseViewController.swift */; };
 		66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD52065379E0027ED11 /* AppDelegate.swift */; };
 		66480BD82065379E0027ED11 /* TypingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD72065379E0027ED11 /* TypingViewController.swift */; };
-		66480BDB2065379E0027ED11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66480BD92065379E0027ED11 /* Main.storyboard */; };
 		66480BDD2065379E0027ED11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDC2065379E0027ED11 /* Assets.xcassets */; };
 		66480BE02065379E0027ED11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */; };
 		66480BEB2065379E0027ED11 /* TypingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BEA2065379E0027ED11 /* TypingGameTests.swift */; };
@@ -31,11 +30,10 @@
 
 /* Begin PBXFileReference section */
 		6602C5B2206540DB00758337 /* TypingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingViewReactor.swift; sourceTree = "<group>"; };
-		6602C5B6206558C100758337 /* Reactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactor.swift; sourceTree = "<group>"; };
+		661714452066B98200EF65FC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		66480BD22065379E0027ED11 /* TypingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66480BD52065379E0027ED11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66480BD72065379E0027ED11 /* TypingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingViewController.swift; sourceTree = "<group>"; };
-		66480BDA2065379E0027ED11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66480BDC2065379E0027ED11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66480BDF2065379E0027ED11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66480BE12065379E0027ED11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,14 +73,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		661714442066B95500EF65FC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66480BD72065379E0027ED11 /* TypingViewController.swift */,
+				6602C5B2206540DB00758337 /* TypingViewReactor.swift */,
+				661714452066B98200EF65FC /* BaseViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6626FF292066B7AD002C61CF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				66834B5A206580DD003136D8 /* NSAttributedString+Helpers.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		6626FF2A2066B7C5002C61CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66480BE12065379E0027ED11 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6626FF2B2066B7DB002C61CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66480BDC2065379E0027ED11 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		66480BC92065379E0027ED11 = {
 			isa = PBXGroup;
 			children = (
+				14F8C9050AF35C7893B266D5 /* Frameworks */,
+				6DDAC6EBC92496377F085473 /* Pods */,
+				66480BD32065379E0027ED11 /* Products */,
 				66480BD42065379E0027ED11 /* TypingGame */,
 				66480BE92065379E0027ED11 /* TypingGameTests */,
-				66480BD32065379E0027ED11 /* Products */,
-				6DDAC6EBC92496377F085473 /* Pods */,
-				14F8C9050AF35C7893B266D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,14 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				66480BD52065379E0027ED11 /* AppDelegate.swift */,
-				6602C5B6206558C100758337 /* Reactor.swift */,
-				66834B5A206580DD003136D8 /* NSAttributedString+Helpers.swift */,
-				6602C5B2206540DB00758337 /* TypingViewReactor.swift */,
-				66480BD72065379E0027ED11 /* TypingViewController.swift */,
-				66480BD92065379E0027ED11 /* Main.storyboard */,
-				66480BDC2065379E0027ED11 /* Assets.xcassets */,
+				661714442066B95500EF65FC /* View Controllers */,
+				6626FF2B2066B7DB002C61CF /* Resources */,
+				6626FF2A2066B7C5002C61CF /* Supporting Files */,
+				6626FF292066B7AD002C61CF /* Utility */,
 				66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */,
-				66480BE12065379E0027ED11 /* Info.plist */,
 			);
 			path = TypingGame;
 			sourceTree = "<group>";
@@ -114,8 +143,8 @@
 		66480BE92065379E0027ED11 /* TypingGameTests */ = {
 			isa = PBXGroup;
 			children = (
-				66480BEA2065379E0027ED11 /* TypingGameTests.swift */,
 				66480BEC2065379E0027ED11 /* Info.plist */,
+				66480BEA2065379E0027ED11 /* TypingGameTests.swift */,
 			);
 			path = TypingGameTests;
 			sourceTree = "<group>";
@@ -217,7 +246,6 @@
 			files = (
 				66480BE02065379E0027ED11 /* LaunchScreen.storyboard in Resources */,
 				66480BDD2065379E0027ED11 /* Assets.xcassets in Resources */,
-				66480BDB2065379E0027ED11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,13 +266,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6602C5B7206558C100758337 /* Reactor.swift in Sources */,
+				661714462066B98200EF65FC /* BaseViewController.swift in Sources */,
 				66480BD82065379E0027ED11 /* TypingViewController.swift in Sources */,
 				66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */,
 				6602C5B3206540DB00758337 /* TypingViewReactor.swift in Sources */,
@@ -318,20 +350,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		66480BD92065379E0027ED11 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				66480BDA2065379E0027ED11 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				66480BDF2065379E0027ED11 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -451,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3GR96D7Z4R;
-				INFOPLIST_FILE = TypingGame/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TypingGame/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gc.TypingGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3GR96D7Z4R;
-				INFOPLIST_FILE = TypingGame/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TypingGame/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gc.TypingGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
