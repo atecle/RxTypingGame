@@ -15,6 +15,8 @@ final class TypingViewReactor: Reactor {
     
     let initialState: State
     var currentState: State
+    
+    private let provider: ServiceProviderType
 
     enum Action {
         case load
@@ -36,9 +38,10 @@ final class TypingViewReactor: Reactor {
     
     let defaultAttributes = [ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 28) ]
     
-    init() {
+    init(provider: ServiceProviderType) {
         self.initialState = State(attributedText: NSAttributedString(string: promptText, attributes: defaultAttributes))
         self.currentState = initialState
+        self.provider = provider
     }
     
     // Action -> Mutation
@@ -48,7 +51,6 @@ final class TypingViewReactor: Reactor {
             let attributedText = InputDisplayStylingService.defaultPrompt
             return Observable.just(Mutation.updateAttributedText(attributedText))
         case .updateText(let text):
-            print("Should print second")
             let attributedText = InputDisplayStylingService.promptText(input: text, prompt: promptText)
             return Observable.just(Mutation.updateAttributedText(attributedText))
         }

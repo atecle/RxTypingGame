@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		6602C5B3206540DB00758337 /* TypingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602C5B2206540DB00758337 /* TypingViewReactor.swift */; };
 		661714462066B98200EF65FC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661714452066B98200EF65FC /* BaseViewController.swift */; };
+		6639FFB72066E8DD00038E24 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FFB62066E8DD00038E24 /* UIColor+App.swift */; };
+		6639FFBA2066ECD400038E24 /* InputDisplayStylingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FFB92066ECD400038E24 /* InputDisplayStylingService.swift */; };
+		6639FFBC2066ED6E00038E24 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FFBB2066ED6E00038E24 /* ServiceProvider.swift */; };
 		66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD52065379E0027ED11 /* AppDelegate.swift */; };
 		66480BD82065379E0027ED11 /* TypingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD72065379E0027ED11 /* TypingViewController.swift */; };
 		66480BDD2065379E0027ED11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDC2065379E0027ED11 /* Assets.xcassets */; };
 		66480BE02065379E0027ED11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDE2065379E0027ED11 /* LaunchScreen.storyboard */; };
 		66480BEB2065379E0027ED11 /* TypingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BEA2065379E0027ED11 /* TypingGameTests.swift */; };
-		66834B5B206580DD003136D8 /* NSAttributedString+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66834B5A206580DD003136D8 /* NSAttributedString+Helpers.swift */; };
 		9E3A5BF9CAAC9B93E0D2808D /* Pods_TypingGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E70946E495BA08123999BC /* Pods_TypingGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,9 @@
 /* Begin PBXFileReference section */
 		6602C5B2206540DB00758337 /* TypingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingViewReactor.swift; sourceTree = "<group>"; };
 		661714452066B98200EF65FC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6639FFB62066E8DD00038E24 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		6639FFB92066ECD400038E24 /* InputDisplayStylingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDisplayStylingService.swift; sourceTree = "<group>"; };
+		6639FFBB2066ED6E00038E24 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		66480BD22065379E0027ED11 /* TypingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66480BD52065379E0027ED11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66480BD72065379E0027ED11 /* TypingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +45,6 @@
 		66480BE62065379E0027ED11 /* TypingGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypingGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66480BEA2065379E0027ED11 /* TypingGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingGameTests.swift; sourceTree = "<group>"; };
 		66480BEC2065379E0027ED11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66834B5A206580DD003136D8 /* NSAttributedString+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Helpers.swift"; sourceTree = "<group>"; };
 		745DA4F05232C3BEA9D64156 /* Pods-TypingGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypingGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame.debug.xcconfig"; sourceTree = "<group>"; };
 		A3E70946E495BA08123999BC /* Pods_TypingGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TypingGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C927BCCBF940E51EAB36F3C0 /* Pods-TypingGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypingGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TypingGame/Pods-TypingGame.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +90,7 @@
 		6626FF292066B7AD002C61CF /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				66834B5A206580DD003136D8 /* NSAttributedString+Helpers.swift */,
+				6639FFB62066E8DD00038E24 /* UIColor+App.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -105,6 +109,15 @@
 				66480BDC2065379E0027ED11 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6639FFB82066ECC100038E24 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6639FFB92066ECD400038E24 /* InputDisplayStylingService.swift */,
+				6639FFBB2066ED6E00038E24 /* ServiceProvider.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		66480BC92065379E0027ED11 = {
@@ -132,6 +145,7 @@
 			children = (
 				66480BD52065379E0027ED11 /* AppDelegate.swift */,
 				661714442066B95500EF65FC /* View Controllers */,
+				6639FFB82066ECC100038E24 /* Service */,
 				6626FF2B2066B7DB002C61CF /* Resources */,
 				6626FF2A2066B7C5002C61CF /* Supporting Files */,
 				6626FF292066B7AD002C61CF /* Utility */,
@@ -325,9 +339,11 @@
 			files = (
 				661714462066B98200EF65FC /* BaseViewController.swift in Sources */,
 				66480BD82065379E0027ED11 /* TypingViewController.swift in Sources */,
+				6639FFBA2066ECD400038E24 /* InputDisplayStylingService.swift in Sources */,
 				66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */,
+				6639FFBC2066ED6E00038E24 /* ServiceProvider.swift in Sources */,
 				6602C5B3206540DB00758337 /* TypingViewReactor.swift in Sources */,
-				66834B5B206580DD003136D8 /* NSAttributedString+Helpers.swift in Sources */,
+				6639FFB72066E8DD00038E24 /* UIColor+App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.backgroundColor = .white
         window.makeKeyAndVisible()
         
-        let reactor = TypingViewReactor()
+        let provider = ServiceProvider()
+        let reactor = TypingViewReactor(provider: provider)
         let viewController = TypingViewController(reactor: reactor)
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController

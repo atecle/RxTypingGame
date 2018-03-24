@@ -16,13 +16,7 @@ import SnapKit
 final class TypingViewController: BaseViewController, View {
     
     // MARK: - Properties
-        
-    enum Color {
-        static let defaultTextColor: UIColor = .darkGray
-        static let correctTextColor: UIColor = .green
-        static let incorrectTextColor: UIColor = .red
-    }
-    
+
     private let headerView: UIView = TypingViewController.createHeaderView()
     private static func createHeaderView() -> UIView {
         let view = UIView()
@@ -40,7 +34,6 @@ final class TypingViewController: BaseViewController, View {
     private static func createInputDisplayLabel() -> UILabel {
         let label = UILabel()
         label.isUserInteractionEnabled = false
-        label.text = "lalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdflalalalalalasdf asdf asdf "
         label.numberOfLines = 0
         label.backgroundColor = UIColor.white
         return label
@@ -80,7 +73,6 @@ final class TypingViewController: BaseViewController, View {
         
         reactor.state.asObservable()
             .map { $0.attributedText }
-            .skip(1)
             .subscribe(onNext: { [weak self] in
             self?.inputDisplayLabel.attributedText = $0
         }).disposed(by: disposeBag)
