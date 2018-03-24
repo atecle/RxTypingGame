@@ -32,8 +32,28 @@ final class InputDisplayStylingService: InputDisplayStylingServiceType {
     }
     
     func createDisplayString(input: String, prompt: String) -> Observable<NSAttributedString> {
+        let typedTextRange = typedRange(input: input, prompt: prompt)
+        let untypedTextRange = untypedRange(input: input, prompt: prompt)
+        let incorrectTextRange = incorrectRange(input: input, prompt: prompt)
+        let currentTextRange = currentRange(input: input, prompt: prompt)
         return Observable.just(NSAttributedString(string: InputDisplayStylingService.promptText,
                                                   attributes: InputDisplayStylingService.defaultAttributes))
+    }
+    
+    private func typedRange(input: String, prompt: String) -> NSRange {
+        return NSRange(location: 0, length: 0)
+    }
+    
+    private func untypedRange(input: String, prompt: String) -> NSRange {
+        return NSRange(location: 0, length: 0)
+    }
+    
+    private func incorrectRange(input: String, prompt: String) -> NSRange {
+        return NSRange(location: 0, length: 0)
+    }
+    
+    private func currentRange(input: String, prompt: String) -> NSRange {
+        return NSRange(location: 0, length: 0)
     }
 
 }
