@@ -12,6 +12,7 @@
 		6639FFB72066E8DD00038E24 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FFB62066E8DD00038E24 /* UIColor+App.swift */; };
 		6639FFBA2066ECD400038E24 /* InputDisplayStylingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FFB92066ECD400038E24 /* InputDisplayStylingService.swift */; };
 		6639FFBC2066ED6E00038E24 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FFBB2066ED6E00038E24 /* ServiceProvider.swift */; };
+		6639FFBE20670A7700038E24 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FFBD20670A7700038E24 /* String+Helpers.swift */; };
 		66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD52065379E0027ED11 /* AppDelegate.swift */; };
 		66480BD82065379E0027ED11 /* TypingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66480BD72065379E0027ED11 /* TypingViewController.swift */; };
 		66480BDD2065379E0027ED11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66480BDC2065379E0027ED11 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		6639FFB62066E8DD00038E24 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		6639FFB92066ECD400038E24 /* InputDisplayStylingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDisplayStylingService.swift; sourceTree = "<group>"; };
 		6639FFBB2066ED6E00038E24 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		6639FFBD20670A7700038E24 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		66480BD22065379E0027ED11 /* TypingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66480BD52065379E0027ED11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66480BD72065379E0027ED11 /* TypingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				6639FFB62066E8DD00038E24 /* UIColor+App.swift */,
+				6639FFBD20670A7700038E24 /* String+Helpers.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				66480BD82065379E0027ED11 /* TypingViewController.swift in Sources */,
 				6639FFBA2066ECD400038E24 /* InputDisplayStylingService.swift in Sources */,
 				66480BD62065379E0027ED11 /* AppDelegate.swift in Sources */,
+				6639FFBE20670A7700038E24 /* String+Helpers.swift in Sources */,
 				6639FFBC2066ED6E00038E24 /* ServiceProvider.swift in Sources */,
 				6602C5B3206540DB00758337 /* TypingViewReactor.swift in Sources */,
 				6639FFB72066E8DD00038E24 /* UIColor+App.swift in Sources */,

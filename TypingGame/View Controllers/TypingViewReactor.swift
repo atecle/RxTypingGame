@@ -29,6 +29,7 @@ final class TypingViewReactor: Reactor {
 
     /// State must emit values to assign to attributed string.
     struct State {
+        var isEditing: Bool
         var attributedText: NSAttributedString
     }
     
@@ -39,7 +40,7 @@ final class TypingViewReactor: Reactor {
     let defaultAttributes = [ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 28) ]
     
     init(provider: ServiceProviderType) {
-        self.initialState = State(attributedText: NSAttributedString(string: promptText, attributes: defaultAttributes))
+        self.initialState = State(isEditing: false, attributedText: NSAttributedString(string: promptText, attributes: defaultAttributes))
         self.currentState = initialState
         self.provider = provider
     }
@@ -51,8 +52,9 @@ final class TypingViewReactor: Reactor {
             let attributedText = InputDisplayStylingService.defaultPrompt
             return Observable.just(Mutation.updateAttributedText(attributedText))
         case .updateText(let text):
-            let attributedText = InputDisplayStylingService.promptText(input: text, prompt: promptText)
-            return Observable.just(Mutation.updateAttributedText(attributedText))
+            return provider.stylingService
+                .createDisplayString(input: text, prompt: promptText)
+                .map { return Mutation.updateAttributedText($0) }
         }
     }
 
@@ -62,6 +64,7 @@ final class TypingViewReactor: Reactor {
         switch mutation {
         case .updateAttributedText(let attributedText):
             state.attributedText = attributedText
+            state.isEditing = true
         }
         
         return state

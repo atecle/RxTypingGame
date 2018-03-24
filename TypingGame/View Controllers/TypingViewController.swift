@@ -27,6 +27,7 @@ final class TypingViewController: BaseViewController, View {
     private let hiddenTextView: UITextView = TypingViewController.createHiddenTextView()
     private static func createHiddenTextView() -> UITextView {
         let textView = UITextView()
+        textView.autocorrectionType = .no
         return textView
     }
     
@@ -73,9 +74,16 @@ final class TypingViewController: BaseViewController, View {
         
         reactor.state.asObservable()
             .map { $0.attributedText }
-            .subscribe(onNext: { [weak self] in
-            self?.inputDisplayLabel.attributedText = $0
+            .subscribe(onNext: { [weak inputDisplayLabel] in
+                inputDisplayLabel?.attributedText = $0
         }).disposed(by: disposeBag)
+        
+        reactor.state.asObservable()
+            .map { $0.isEditing }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak hiddenTextView] isEditing in
+                _ = isEditing ? hiddenTextView?.becomeFirstResponder() : hiddenTextView?.resignFirstResponder()
+            }).disposed(by: disposeBag)
     }
     
     // MARK: - View setup

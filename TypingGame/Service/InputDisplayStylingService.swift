@@ -24,7 +24,10 @@ final class InputDisplayStylingService: InputDisplayStylingServiceType {
     private static let defaultAttributes = [ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 28) ]
     
     static var defaultPrompt: NSAttributedString {
-        return NSAttributedString(string: promptText, attributes: defaultAttributes)
+        let prompt = NSMutableAttributedString(string: promptText)
+        prompt.addAttributes(defaultAttributes, range: promptText.range)
+        prompt.addAttribute(.backgroundColor, value: UIColor.currentTextBackgroundColor, range: NSRange(location: 0, length: 1))
+        return prompt
     }
     
     static func promptText(input: String, prompt: String) -> NSAttributedString {
@@ -32,12 +35,15 @@ final class InputDisplayStylingService: InputDisplayStylingServiceType {
     }
     
     func createDisplayString(input: String, prompt: String) -> Observable<NSAttributedString> {
-        let typedTextRange = typedRange(input: input, prompt: prompt)
-        let untypedTextRange = untypedRange(input: input, prompt: prompt)
-        let incorrectTextRange = incorrectRange(input: input, prompt: prompt)
+        let attributedText = NSMutableAttributedString(string: prompt)
+        
+//        let typedTextRange = typedRange(input: input, prompt: prompt)
+//        let untypedTextRange = untypedRange(input: input, prompt: prompt)
+//        let incorrectTextRange = incorrectRange(input: input, prompt: prompt)
         let currentTextRange = currentRange(input: input, prompt: prompt)
-        return Observable.just(NSAttributedString(string: InputDisplayStylingService.promptText,
-                                                  attributes: InputDisplayStylingService.defaultAttributes))
+        attributedText.addAttribute(.backgroundColor, value: UIColor.currentTextBackgroundColor, range: currentTextRange)
+        attributedText.addAttributes(InputDisplayStylingService.defaultAttributes, range: prompt.range)
+        return Observable.just(attributedText)
     }
     
     private func typedRange(input: String, prompt: String) -> NSRange {
@@ -45,6 +51,9 @@ final class InputDisplayStylingService: InputDisplayStylingServiceType {
     }
     
     private func untypedRange(input: String, prompt: String) -> NSRange {
+//        let inputCharacterCount = input.count
+//        let promptCharacterCount = input.count
+        
         return NSRange(location: 0, length: 0)
     }
     
@@ -53,7 +62,7 @@ final class InputDisplayStylingService: InputDisplayStylingServiceType {
     }
     
     private func currentRange(input: String, prompt: String) -> NSRange {
-        return NSRange(location: 0, length: 0)
+        return NSRange(location: input.count, length: 1)
     }
 
 }
