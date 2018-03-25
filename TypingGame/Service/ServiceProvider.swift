@@ -8,9 +8,11 @@
 
 protocol ServiceProviderType: class {
     var stylingService: InputDisplayStylingServiceType { get }
+    var editingBehaviorService: EditingBehaviorServiceType { get }
 }
 
 final class ServiceProvider: ServiceProviderType {
     lazy var stylingService: InputDisplayStylingServiceType = InputDisplayStylingService()
+    lazy var editingBehaviorService: EditingBehaviorServiceType = EditingBehaviorService()
 }
 

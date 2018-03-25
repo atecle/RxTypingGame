@@ -24,6 +24,12 @@ final class TypingViewController: BaseViewController, View {
         return view
     }
     
+    private let containerView: UIView = TypingViewController.createContainerView()
+    private static func createContainerView() -> UIView {
+        let view = UIView()
+        return view
+    }
+    
     private let hiddenTextView: UITextView = TypingViewController.createHiddenTextView()
     private static func createHiddenTextView() -> UITextView {
         let textView = UITextView()
@@ -35,8 +41,19 @@ final class TypingViewController: BaseViewController, View {
     private static func createInputDisplayLabel() -> UILabel {
         let label = UILabel()
         label.isUserInteractionEnabled = false
+        label.backgroundColor = .white
         label.numberOfLines = 0
-        label.backgroundColor = UIColor.white
+        return label
+    }
+    
+    private let statusLabel: UILabel = TypingViewController.createStatusLabel()
+    private static func createStatusLabel() -> UILabel {
+        let label = UILabel()
+        label.textColor = .white
+        label.text = "Incorrect key entered"
+        label.backgroundColor = .black
+        label.isHidden = true
+        label.numberOfLines = 1
         return label
     }
     
@@ -45,6 +62,7 @@ final class TypingViewController: BaseViewController, View {
     init(reactor: TypingViewReactor) {
         super.init()
         setupView()
+        title = "Type That Shit!"
         self.reactor = reactor
     }
     
@@ -79,34 +97,75 @@ final class TypingViewController: BaseViewController, View {
         }).disposed(by: disposeBag)
         
         reactor.state.asObservable()
-            .map { $0.isEditing }
+            .map { $0.showKeyboard }
             .distinctUntilChanged()
             .subscribe(onNext: { [weak hiddenTextView] isEditing in
                 _ = isEditing ? hiddenTextView?.becomeFirstResponder() : hiddenTextView?.resignFirstResponder()
+            }).disposed(by: disposeBag)
+        
+        reactor.state.asObservable()
+            .map { $0.allowEditing }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak hiddenTextView] isEditing in
+                _ = isEditing ? hiddenTextView?.becomeFirstResponder() : hiddenTextView?.resignFirstResponder()
+            }).disposed(by: disposeBag)
+        
+        hiddenTextView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        reactor.state.asObservable()
+            .map { $0.showStatusLabel }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak statusLabel] show in
+                statusLabel?.isHidden = !show
             }).disposed(by: disposeBag)
     }
     
     // MARK: - View setup
     
     private func setupView() {
+        view.backgroundColor = .grayBackgroundColor
+        containerView.backgroundColor = .white
+        
         view.addSubview(headerView)
-        view.addSubview(hiddenTextView)
-        view.addSubview(inputDisplayLabel)
+        view.addSubview(containerView)
+        view.addSubview(statusLabel)
+        
+        containerView.addSubview(hiddenTextView)
+        containerView.addSubview(inputDisplayLabel)
         
         headerView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.leading.trailing.equalTo(view)
             $0.height.equalTo(50)
         }
+        containerView.snp.makeConstraints {
+            $0.top.equalTo(headerView.snp.bottom).inset(-20)
+            $0.leading.equalTo(14)
+            $0.trailing.equalTo(-14)
+        }
         hiddenTextView.snp.makeConstraints {
-            $0.top.equalTo(headerView.snp.bottom)
-            $0.trailing.leading.bottom.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
         inputDisplayLabel.snp.makeConstraints {
-            $0.top.equalTo(hiddenTextView)
-            $0.leading.trailing.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
+        statusLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(containerView.snp.bottom).inset(-20)
+        }
+        
     }
     
+}
+
+extension TypingViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        var thisisBad = true
+        reactor!.state.asObservable().map { $0.allowEditing }.bind(onNext: { allowEditing in
+            thisisBad = allowEditing
+        }).disposed(by: disposeBag)
+        return thisisBad
+    }
 }
 

@@ -25,22 +25,18 @@ final class TypingViewReactor: Reactor {
     
     enum Mutation {
         case updateAttributedText(NSAttributedString)
+        case setAllowEditing(Bool)
     }
 
-    /// State must emit values to assign to attributed string.
     struct State {
-        var isEditing: Bool
+        var showKeyboard: Bool
+        var allowEditing: Bool
+        var showStatusLabel: Bool
         var attributedText: NSAttributedString
     }
     
-    let promptText = """
-    This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works.
-    """
-    
-    let defaultAttributes = [ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 28) ]
-    
     init(provider: ServiceProviderType) {
-        self.initialState = State(isEditing: false, attributedText: NSAttributedString(string: promptText, attributes: defaultAttributes))
+        self.initialState = State(showKeyboard: false, allowEditing: true, showStatusLabel: false, attributedText: InputDisplayStylingService.defaultPrompt)
         self.currentState = initialState
         self.provider = provider
     }
@@ -52,9 +48,13 @@ final class TypingViewReactor: Reactor {
             let attributedText = InputDisplayStylingService.defaultPrompt
             return Observable.just(Mutation.updateAttributedText(attributedText))
         case .updateText(let text):
-            return provider.stylingService
-                .createDisplayString(input: text, prompt: promptText)
+            let displayStringObservable = provider.stylingService
+                .createDisplayString(input: text)
                 .map { return Mutation.updateAttributedText($0) }
+            let allowEditingObservable = provider.editingBehaviorService
+                .shouldAllowEditing(input: text, prompt: InputDisplayStylingService.defaultPrompt.string)
+                .map { Mutation.setAllowEditing($0) }
+            return Observable.merge(displayStringObservable, allowEditingObservable)
         }
     }
 
@@ -64,9 +64,11 @@ final class TypingViewReactor: Reactor {
         switch mutation {
         case .updateAttributedText(let attributedText):
             state.attributedText = attributedText
-            state.isEditing = true
+            state.showKeyboard = true
+        case .setAllowEditing(let allowEditing):
+            state.allowEditing = allowEditing
         }
-        
+
         return state
     }
     

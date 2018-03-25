@@ -10,6 +10,8 @@ import UIKit
 
 extension UIColor {
     
+    static let grayBackgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9411764706, blue: 0.9450980392, alpha: 1)
+    
     static let untypedTextColor = UIColor.black
     
     static let typedTextColor = UIColor.gray

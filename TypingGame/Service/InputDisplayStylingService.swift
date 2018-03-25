@@ -12,13 +12,13 @@ import RxSwift
 
 protocol InputDisplayStylingServiceType {
     
-    func createDisplayString(input: String, prompt: String) -> Observable<NSAttributedString>
+    func createDisplayString(input: String) -> Observable<NSAttributedString>
 }
 
 final class InputDisplayStylingService: InputDisplayStylingServiceType {
     
     private static let promptText = """
-    This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works.
+    This is some default text that I'm adding to make sure that this app works. This is some default text that I'm adding to make sure that this app works.
     """
     
     private static let defaultAttributes = [ NSAttributedStringKey.font: UIFont.systemFont(ofSize: 28) ]
@@ -30,11 +30,8 @@ final class InputDisplayStylingService: InputDisplayStylingServiceType {
         return prompt
     }
     
-    static func promptText(input: String, prompt: String) -> NSAttributedString {
-        return NSAttributedString(string: promptText, attributes: defaultAttributes)
-    }
-    
-    func createDisplayString(input: String, prompt: String) -> Observable<NSAttributedString> {
+    func createDisplayString(input: String) -> Observable<NSAttributedString> {
+        let prompt = InputDisplayStylingService.promptText
         let attributedText = NSMutableAttributedString(string: prompt)
         
 //        let typedTextRange = typedRange(input: input, prompt: prompt)
